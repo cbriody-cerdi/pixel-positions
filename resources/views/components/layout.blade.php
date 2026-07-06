@@ -7,11 +7,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
     @vite(['resources/js/app.js'])
 </head>
-<body class="bg-black text-white">
+<body class="bg-black text-white font-inter pb-80">
 
     <div class="px-10">
         <nav class="flex justify-between items-center py-4 border-b border-white/10">
