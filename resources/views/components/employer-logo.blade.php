@@ -1,4 +1,3 @@
-@props(['width' => 95])
+@props(['employer', 'width' => 90])
 
-<img src="{{ Vite::asset('resources/images/CeRDI-acronym-and-fed-flag-2-solid-white-bg.png') }}"
-     alt="Company Logo" width="{{ $width }}" class="rounded-xl">
+<img src="{{ asset($employer->logo) }}" alt="" class="rounded-xl" width="{{ $width }}">
