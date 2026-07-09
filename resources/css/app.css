@@ -14,3 +14,20 @@
     --text-2xs--line-height: 1rem;
 
 }
+
+
+@layer components {
+    .file-upload {
+        @apply block w-full text-sm text-gray-700
+        file:mr-4
+        file:rounded-md
+        file:border-0
+        file:bg-gray-400
+        file:px-4
+        file:py-2
+        file:text-sm
+        file:font-medium
+        file:text-white
+        hover:file:bg-gray-500;
+    }
+}
