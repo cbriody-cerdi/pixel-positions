@@ -19,7 +19,7 @@
         {
             return [
                 'name' => fake()->company(),
-                'logo' => fake()->imageUrl(),
+                'logo' => 'https://picsum.photos/seed/' . fake()->unique()->slug() . '/640/480',
                 'user_id' => User::factory(),
             ];
         }

@@ -15,7 +15,8 @@
         {
             $tag = Tag::firstOrCreate(['name' => strtolower($name)]);
 
-            $this->tags()->attach($tag);
+            //$this->tags()->attach($tag);
+            $this->tags()->syncWithoutDetaching([$tag->id]);
         }
 
         public function tags(): BelongsToMany

@@ -24,4 +24,15 @@
 
     </div>
 
+    <div class="flex justify-between items-center mt-6">
+
+        @can('update', $job)
+            <x-forms.button>
+                <a href="/jobs/{{ $job->id }}/edit" class="text-blue-500 hover:underline">Edit</a>
+            </x-forms.button>
+        @endcan
+
+
+    </div>
+
 </x-panel>
