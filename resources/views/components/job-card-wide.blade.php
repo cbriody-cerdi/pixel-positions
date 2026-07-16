@@ -2,7 +2,7 @@
 
 <x-panel class="flex gap-x-6">
     <div>
-        <x-employer-logo :employer="$job->employer" />
+        <x-employer-logo :employer="$job->employer"/>
     </div>
 
     <div class="flex-1 flex flex-col">
@@ -11,7 +11,7 @@
 
         <h3 class="font-bold text-xl mt-3 group-hover:text-blue-800 transition-colors duration-300">
             <a href="{{ $job->url }}" target="_blank">
-            {{ $job->title }}
+                {{ $job->title }}
             </a>
         </h3>
 
@@ -21,8 +21,13 @@
 
     <div>
         @foreach($job->tags as $tag)
-            <x-tag :$tag />
+            <x-tag :$tag/>
         @endforeach
+        @can('update', $job)
+            <x-forms.button>
+                <a href="/jobs/{{ $job->id }}/edit" class="text-blue-500 hover:underline">Edit</a>
+            </x-forms.button>
+        @endcan
     </div>
 
 </x-panel>

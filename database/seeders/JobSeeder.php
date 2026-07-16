@@ -15,14 +15,15 @@
          */
         public function run(): void
         {
-            $tags = Tag::factory(3)->create();
+            $tags = Tag::factory(20)->create();
 
-            Job::factory(20)->hasAttached($tags)->create(new Sequence([
+            Job::factory(200)->create(new Sequence([
                 'featured' => false,
                 'schedule' => 'Full time',
             ], [
                 'featured' => true,
                 'schedule' => 'Part time',
-            ]));
+            ]))->each(fn (Job $job) => $job->tags()->attach($tags->random(3)));
+
         }
     }
